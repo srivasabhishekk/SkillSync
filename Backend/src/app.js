@@ -16,6 +16,9 @@ const authRouter = require('./routes/auth.routes')
 const interviewRouter = require('../src/routes/interview.routes')
 
 // using all the routes here
+app.get('/', (req, res) => {
+    res.send("Welcome To SkillSync")
+})
 app.use('/api/auth', authRouter)
 app.use('/api/interview', interviewRouter)
 
