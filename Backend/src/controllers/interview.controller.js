@@ -66,7 +66,7 @@ const getInterviewReport = async (req, res) => {
         })
     }
 
-    const interviewReport = await interviewReportModel.findOne({ interviewId })
+    const interviewReport = await interviewReportModel.findById(interviewId)
 
     if(!interviewReport){
         return res.status(400).json({
